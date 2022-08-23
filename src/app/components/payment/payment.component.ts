@@ -10,7 +10,7 @@ export class PaymentComponent implements OnInit {
   constructor() { }
 
   public mss:boolean =false;
-  public mss:boolean =false;
+  
 
   
   ngOnInit(): void {
@@ -19,9 +19,6 @@ export class PaymentComponent implements OnInit {
   creation(){
     this.mss = true;
 
-  }
-  fun(){
-    this.mss =true;
   }
 }
 
