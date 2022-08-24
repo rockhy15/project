@@ -10,6 +10,7 @@ export class PaymentComponent implements OnInit {
   constructor() { }
 
   public mss:boolean =false;
+  public ma:boolean =false;
   
 
   
@@ -18,7 +19,12 @@ export class PaymentComponent implements OnInit {
 
   creation(){
     this.mss = true;
+    
 
+  }
+  mention(){
+    this.mss= false;
+    this.ma =true;
   }
 }
 

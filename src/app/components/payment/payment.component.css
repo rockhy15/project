@@ -95,3 +95,16 @@ h1{
     bottom:50%;
     left:30%;
 }
+.current{
+  position: absolute;
+  bottom:40%;
+    left:60%;
+
+}
+.win{
+  position: absolute;
+  bottom:50%;
+    left:60%;
+
+
+}

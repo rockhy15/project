@@ -27,10 +27,22 @@
 
   <div>
     <div class="gun">
-        <input type="radio" (click) = "creation()">Credit Card
+        <input type="radio" name="logo" (click) = "creation()">Credit Card 
+
+        
         
     </div>
-  
+   
+    <div class="win">
+    <input type="radio" name="logo" (click) = "mention()" >Delivery to pay
+    </div>
+    <div class="current" *ngIf="ma">
+    
+      <button class="btn btn-danger" routerLink="/confirmation">Placed Order</button>
+    </div>
+    
+    
+
  
   <div *ngIf="mss">
     <section class="container">
@@ -49,10 +61,16 @@
             
             <h1>Payment</h1>
             
-                 
-  <input type="number" placeholder="credit card"><br>
-  <br> <p id="ten">Expiry <input type="number"  placeholder="month"><input type="number" id=" ten" placeholder="year"> <br>
-   <br><button class="btn btn-success" routerLink="/confirmation">Complete Order</button>
+                
+  <input type="number" placeholder="Credit Card"><br>
+  <label for="start"></label>
+
+
+
+  <br> <p id="ten">Expiry <input type="month" id="start" name="start"
+    min="2018-03" value="2018-05"><br>
+    
+   <br><button class="btn btn-success" routerLink="/confirmation">Placed Order</button>
    </p>
                     </div>
                 </div>

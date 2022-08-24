@@ -16,3 +16,21 @@ h6{
 label{
     color:#fff;
 }
+.content{
+    max-width:500px;
+    margin:auto;
+    background-color: #fff;
+    padding:2% 2%;
+  }
+  button{
+   
+    color:#fff
+  
+  }
+  
+  button:hover{
+    color:#fff
+  }
+  .error{
+    color:yellowgreen;
+  }

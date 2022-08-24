@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <ng-container *ngIf="product.length !=0">
     <div class="container">
     <div class="card-table">
@@ -23,13 +23,9 @@
                         <td><img style="width: 120px;" src="{{item.Image}}" alt="logo">  </td>
                         <td>{{item.desc}}</td>
                         <th>{{item.price}}</th>
-                        <td><button type="button" class="btn" (click)="inc(item)"><i class="fa fa-plus"></i></button>{{item.quantity}}<button type="button" class="btn" (click)="dec(item)"><i class="fa fa-minus"></i></button></td>
-
-                        <td>{{item.total}}</td>
-
-
-
-                          <td>  <button (click) = "removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
+                        <td><button type="btn btn-success" class="btn" (click)="inc(item)"><i class="fa fa-plus"></i></button>{{item.quantity}}<button type="btn btn-danger" class="btn" (click)="dec(item)"><i class="fa fa-minus"></i></button></td>
+            <td>{{item.total}}</td>
+            <td><button  (click)="removeCartItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                     
                     </tr>
                       
