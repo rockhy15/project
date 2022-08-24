@@ -15,6 +15,7 @@ import { ShippingComponent } from './components/shipping/shipping.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
