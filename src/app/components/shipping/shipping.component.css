@@ -113,3 +113,7 @@ body {
   .error{
     color:greenyellow;
   }
+  .ship{
+    position: relative;
+    top:50px;
+  }

@@ -1,110 +1,121 @@
 <div class="container">
-    <section class="step-indicator">
-        <div class="step step1 ">
-            <div class="step-icon">1</div>
-          <p>LogIn</p>
-        </div>
-        <div class="indicator-line active"></div>
-        <div class="step step2 active ">
-            <div class="step-icon">2</div><br>
-          <p>Shipping Address</p>
-        </div>
-      <div class="indicator-line active"></div>
-      <div class="step step3">
-          <div class="step-icon">3</div>
-        <p>Payment</p>
-      </div>
-      <div class="indicator-line"></div>
-      <div class="step step4">
-          <div class="step-icon">4</div>
-        <p>Confirmation</p>
-      </div>
-    </section>
-  
-  <section class="container mt-5" >
+  <section class="step-indicator">
+    <div class="step step1 ">
+      <div class="step-icon">1</div>
+      <p>LogIn</p>
+    </div>
+    <div class="indicator-line active"></div>
+    <div class="step step2 active ">
+      <div class="step-icon">2</div>
+      
+      <p class="ship">Shipping Address</p>
+    </div>
+    <div class="indicator-line active"></div>
+    <div class="step step3">
+      <div class="step-icon">3</div>
+      <p>Payment</p>
+    </div>
+    <div class="indicator-line"></div>
+    <div class="step step4">
+      <div class="step-icon">4</div>
+      <p>Confirmation</p>
+    </div>
+  </section>
+
+  <section class="container mt-5">
     <form class="content" [formGroup]="login" (ngSubmit)="submitData()">
-    <div class="row">
+      <div class="row">
         <div class="col-md-6">
-            <div class="card"  >
-                <div class="text-container">
-            
-        
-        <h1>Shipping Address</h1>
-             
+          <div class="card">
+            <div class="text-container">
+
+
+              <h1>Shipping Address</h1>
+
             </div>
             <div class="mb-3">
-                <label >Full Name</label>
-                <input type="text" class="form-control" formControlName="fullname" placeholder="Enter Name" >
-                <div *ngIf="fullname.invalid && (fullname.touched || fullname.dirty)">
-                  <span class="error" *ngIf="fullname.errors?.required">*Full Name  is Required</span>
-                  <span class="error" *ngIf="fullname.errors?.fullname">*Enter valid Full Name address</span>
-                  
-                
+              <label>Full Name</label>
+              <input type="text" class="form-control" formControlName="fullname" placeholder="Enter Name">
+              <div *ngIf="fullname.invalid && (fullname.touched || fullname.dirty)">
+                <span class="error" *ngIf="fullname.errors?.required">*Full Name is Required</span>
+                <span class="error" *ngIf="fullname.errors?.fullname">*Enter valid Full Name address</span>
+
+
               </div>
               <div class="mb-3">
                 <label>Moblie Number</label>
-                <input type="number" formControlName="number" placeholder="Enter Moblie number" class="form-control" id="exampleInputPassword1">
+                <input type="number" formControlName="number" placeholder="Enter Moblie number" class="form-control"
+                  id="exampleInputPassword1">
                 <div *ngIf="number.invalid && (number.touched || number.dirty)">
-                <span class="error" *ngIf="number.errors?.required">*Moblie Number  is Required</span>
-                <span class="error" *ngIf="number.errors?.number">*Enter valid Moblie Number address</span>
-                
-              </div>
-              <div class="mb-3">
-                <label >Landmark</label>
-                <input type="text" class="form-control" formControlName="landmark" placeholder="Landmark">
-                <div *ngIf="landmark.invalid && (landmark.touched || landmark.dirty)">
-                  <span class="error" *ngIf="landmark.errors?.required">*Landmark  is Required</span>
-                  <span class="error" *ngIf="landmark.errors?.landmark">*Enter valid Landmark address</span>
-                  
-                
-              </div>
+                  <span class="error" *ngIf="number.errors?.required">*Moblie Number is Required</span>
+                  <span class="error" *ngIf="number.errors?.number">*Enter valid Moblie Number address</span>
+
+                </div>
                 <div class="mb-3">
-                    <label >State</label>
+                  <label>Landmark</label>
+                  <input type="text" class="form-control" formControlName="landmark" placeholder="Landmark">
+                  <div *ngIf="landmark.invalid && (landmark.touched || landmark.dirty)">
+                    <span class="error" *ngIf="landmark.errors?.required">*Landmark is Required</span>
+                    <span class="error" *ngIf="landmark.errors?.landmark">*Enter valid Landmark address</span>
+
+
+                  </div>
+                  <div class="mb-3">
+                    <label>State</label>
                     <input type="text" class="form-control" formControlName="state">
                     <div *ngIf="state.invalid && (state.touched || state.dirty)">
                       <span class="error" *ngIf="state.errors?.required">*State is Required</span>
                       <span class="error" *ngIf="state.errors?.state">*Enter valid State address</span>
-                      
-                    
-                
-                </div>
-                <div class="mb-3">
-                  <label  >Email address</label>
-                  <input type="text" formControlName="emailid"  class="form-control" placeholder="Enter Email"  >
-                 
-                
-                <div *ngIf="emailid.invalid && (emailid.touched || emailid.dirty)">
-                  <span class="error" *ngIf="emailid.errors?.required">*Email Id is Required</span>
-                  <span class="error" *ngIf="emailid.errors?.email">*Enter valid Email Address</span>
-                  
-                </div>
-                </div>
-                <div class="mb-3">
-                  <label>Password</label>
-                  <input type="password" formControlName="password" placeholder="Enter Password" class="form-control" id="exampleInputPassword1">
-                  <div *ngIf="password.invalid && (password.touched || password.dirty)">
-                  <span class="error" *ngIf="password.errors?.required">*Password  is Required</span>
-                  <span class="error" *ngIf="password.errors?.password">*Enter valid password address</span>
-                  
-                     </div>
-                    <div class="mb-2 form-check">
-                   <br>
 
-                      <button class="btn btn-info" type="submit" routerLink="/payment">Proceed to payment</button>
-                    
+
+
                     </div>
-                
-            
-                  
-            
-                
-                
-                </div>
-                
-               
-        
-        
-        </div>
-    </div>
+                    <div class="mb-3">
+                      <label>Email address</label>
+                      <input type="text" formControlName="emailid" class="form-control" placeholder="Enter Email">
 
+
+                      <div *ngIf="emailid.invalid && (emailid.touched || emailid.dirty)">
+                        <span class="error" *ngIf="emailid.errors?.required">*Email Id is Required</span>
+                        <span class="error" *ngIf="emailid.errors?.email">*Enter valid Email Address</span>
+
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label>Password</label>
+                      <input type="password" formControlName="password" placeholder="Enter Password"
+                        class="form-control" id="exampleInputPassword1">
+                      <div *ngIf="password.invalid && (password.touched || password.dirty)">
+                        <span class="error" *ngIf="password.errors?.required">*Password is Required</span>
+                        <span class="error" *ngIf="password.errors?.password">*Enter valid password address</span>
+
+                      </div>
+                      <div class="mb-2 form-check">
+                        <br>
+
+                        <button class="btn btn-info" type="submit" routerLink="/payment"
+                          [disabled]="login.invalid">Proceed to payment</button>
+
+                      </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                  </div>
+                </div>              
+               </div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
 </div>
