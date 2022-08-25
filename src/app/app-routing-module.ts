@@ -26,7 +26,8 @@ const routes: Routes =[
   {path: 'checkout', component : CheckoutComponent},
   {path:'shipping',component : ShippingComponent},
   {path:'payment', component : PaymentComponent},
-  {path: 'confirmation', component : ConfirmationComponent}
+  {path: 'confirmation', component : ConfirmationComponent},
+ 
 ];
 
 

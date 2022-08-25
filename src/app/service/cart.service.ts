@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { ProductsComponent } from '../components/products/products.component';
 
 @Injectable({
   providedIn: 'root'
@@ -45,11 +46,21 @@ export class CartService {
     this.inventory.next(this.cartItemList);
   }
   inc(item:any){
-
+    this.cartItemList.map((a:any, quantity:any)=>{
+      if(item.id === a.id){
+        quantity +=item.quantity
+        this.cartItemList.quantity.push(quantity)
+      }
+      return quantity;
+    })
+    this.inventory.next(this.cartItemList)
     // console.log(item);
-    
-    item.quantity+=1;
-    
+  //   let quantity = 1;
+  //   if(item.quantity){
+  //  quantity = item.quantity+=1;
+  //  this.cartItemList.push(quantity);
+  // }
+  // return quantity;
     }
     
     dec(item:any) {

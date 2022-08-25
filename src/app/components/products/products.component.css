@@ -35,3 +35,7 @@ img{
     transition: 0.3s ease-in-out;
     transform: scale(1.1); 
 }
+.helo{
+    position: absolute;
+    bottom: 1px;
+}

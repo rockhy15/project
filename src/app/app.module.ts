@@ -16,6 +16,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     CheckoutComponent,
     ShippingComponent,
     PaymentComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+  
 
   ],
   imports: [
